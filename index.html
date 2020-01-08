@@ -2,15 +2,33 @@
 <html>
 
 <head>
-
+    <title>Space_AI</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <style>
+        #container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="container"></div>
 
 
 
-    <script src="main.js"></script>
+    <script src="starfield.js"></script>
+    <script>
+        var container = document.getElementById('container');
+        var starfield = new Starfield();
+        starfield.initialise(container);
+        starfield.start();
+    </script>
 </body>
 
 </html>
